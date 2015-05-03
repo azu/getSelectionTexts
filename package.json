@@ -36,7 +36,6 @@
     "espowerify": "^0.10.0",
     "mocha": "^2.2.4",
     "mochify": "^2.8.1",
-    "phantomjs": "git+ssh://git@github.com/dtothefp/phantomjs.git",
     "power-assert": "^0.11.0"
   }
 }
