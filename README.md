@@ -9,8 +9,8 @@ getSelection support multiple ranges.
 ## Usage
 
 ```js
-var getRangeSelection = require("getRangeSelection");
-getRangeSelection();// ["selected", "text"];
+var getSelectionTexts = require("getSelectionTexts");
+getSelectionTexts();// ["selected", "text"];
 ```
 
 ## Tests
