@@ -9,10 +9,12 @@
   "bugs": {
     "url": "https://github.com/azu/getSelectionTexts/issues"
   },
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "getSelection + DOM Range",
   "main": "lib/getSelectionTexts.js",
-  "files":["lib"],
+  "files": [
+    "lib"
+  ],
   "directories": {
     "test": "test"
   },
