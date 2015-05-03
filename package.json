@@ -18,7 +18,7 @@
   "scripts": {
     "build": "babel src --out-dir lib",
     "watch": "babel --source-maps inline --watch src --out-dir lib",
-    "test": "mochify --transform espowerify"
+    "test": "npm run build && mochify --transform espowerify"
   },
   "keywords": [
     "DOM",
