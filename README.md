@@ -4,12 +4,12 @@ getSelection support multiple ranges.
 
 ## Installation
 
-    npm install getSelectionTexts
+    npm install selection-texts
 
 ## Usage
 
 ```js
-var getSelectionTexts = require("getSelectionTexts");
+var getSelectionTexts = require("selection-texts");
 getSelectionTexts();// ["selected", "text"];
 ```
 

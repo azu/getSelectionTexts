@@ -1,5 +1,5 @@
 {
-  "name": "getSelectionTexts",
+  "name": "selection-texts",
   "repository": {
     "type": "git",
     "url": "https://github.com/azu/getSelectionTexts.git"
