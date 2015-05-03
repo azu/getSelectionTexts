@@ -18,7 +18,7 @@
   "scripts": {
     "build": "babel src --out-dir lib",
     "watch": "babel --source-maps inline --watch src --out-dir lib",
-    "test": "mochify --wd --transform espowerify"
+    "test": "mochify --transform espowerify"
   },
   "keywords": [
     "DOM",
@@ -36,6 +36,7 @@
     "espowerify": "^0.10.0",
     "mocha": "^2.2.4",
     "mochify": "^2.8.1",
+    "phantomjs": "git+ssh://git@github.com/dtothefp/phantomjs.git",
     "power-assert": "^0.11.0"
   }
 }

@@ -5,6 +5,8 @@ var getSelectionTexts = require("../lib/getSelectionTexts");
 describe("getSelectionTexts", function () {
     var fixtureDiv;
     afterEach(function () {
+        var s = window.getSelection();
+        s.removeAllRanges();
         if (fixtureDiv) {
             // clean up...
             document.body.removeChild(fixtureDiv);
@@ -46,24 +48,21 @@ describe("getSelectionTexts", function () {
             textA = "Hello";
             textB = "world";
             fixtureDiv = document.createElement('div');
-            fixtureDiv.innerHTML = '<p>' + textA + '</p><hr>' + '<p>' + textB + '</p>';
+            fixtureDiv.innerHTML = '<div id="a"><p>' + textA + '</p></div><div id="b"><p>' + textB + '</p></div>';
             document.body.appendChild(fixtureDiv);
-            var bA = fixtureDiv.firstChild;
-            var bB = fixtureDiv.lastChild;
+            var bA = fixtureDiv.querySelector("#a");
+            var bB = fixtureDiv.querySelector("#b");
             var selection = window.getSelection();
             var rangeA = document.createRange();
             rangeA.selectNode(bA);
-            var rangeB = document.createRange();
-            rangeB.selectNode(bB);
             selection.addRange(rangeA);
-            selection.addRange(rangeB);
+            rangeA.selectNode(bB);
+            selection.addRange(rangeA);
         });
         it("should return Array that contain the text", function () {
             var selectionTexts = getSelectionTexts();
             assert.ok(selectionTexts instanceof Array);
-            assert.equal(selectionTexts.length, 2);
-            assert.deepEqual(selectionTexts[0], textA);
-            assert.deepEqual(selectionTexts[1], textB);
+            assert.equal(selectionTexts.join(""), textA + textB);
         });
     });
 });
