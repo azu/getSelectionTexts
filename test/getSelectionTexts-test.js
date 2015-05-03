@@ -62,6 +62,7 @@ describe("getSelectionTexts", function () {
         it("should return Array that contain the text", function () {
             var selectionTexts = getSelectionTexts();
             assert.ok(selectionTexts instanceof Array);
+            // TODO: when remove phantomjs, more improve this test.
             assert.equal(selectionTexts.join(""), textA + textB);
         });
     });

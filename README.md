@@ -1,4 +1,4 @@
-# getSelectionTexts
+# getSelectionTexts [![Build Status](https://travis-ci.org/azu/getSelectionTexts.svg?branch=master)](https://travis-ci.org/azu/getSelectionTexts)
 
 getSelection support multiple ranges.
 
