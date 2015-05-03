@@ -11,7 +11,8 @@
   },
   "version": "1.0.1",
   "description": "getSelection + DOM Range",
-  "main": "index.js",
+  "main": "lib/getSelectionTexts.js",
+  "files":["lib"],
   "directories": {
     "test": "test"
   },
